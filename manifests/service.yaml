@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: shubham
+spec:
+  type: LoadBalancer
+  selector:
+    app: shubham
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

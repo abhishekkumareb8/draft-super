@@ -2,16 +2,16 @@ name: Build and deploy an app to AKS with Helm
 "on":
     push:
         branches:
-            - draft
+            - master
     workflow_dispatch: null
 env:
-    AZURE_CONTAINER_REGISTRY: draft7787
+    AZURE_CONTAINER_REGISTRY: demoaksacr2
     CHART_OVERRIDE_PATH: ./charts/production.yaml
     CHART_PATH: ./charts
-    CLUSTER_NAME: clu-draft
-    CONTAINER_NAME: super-api
-    IMAGE_PULL_SECRET_NAME: draft7787secret
-    RESOURCE_GROUP: rg-aks
+    CLUSTER_NAME: demoaks
+    CONTAINER_NAME: shubham
+    IMAGE_PULL_SECRET_NAME: demoaksacr2secret
+    RESOURCE_GROUP: aks-backup-rg
 jobs:
     buildImage:
         permissions:

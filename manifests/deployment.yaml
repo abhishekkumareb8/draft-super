@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shubham
+  labels:
+    app: shubham
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shubham
+  template:
+    metadata:
+      labels:
+        app: shubham
+    spec:
+      containers:
+        - name: shubham
+          image: shubham
+          ports:
+            - containerPort: 80
